@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - 8
+  - 9
+  - 10
+
+cache: yarn
+
+install:
+  - yarn --silent
+
+script:
+  - yarn lint
+  - yarn test
+  - yarn build
