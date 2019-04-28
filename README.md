@@ -1,4 +1,4 @@
-![nouveau](./misc/nouveau-logotype.svg)
+<img src="./misc/nouveau-logotype.svg" width="400px">
 
 [![Build Status](https://travis-ci.com/metonym/nouveau.svg?branch=master)](https://travis-ci.com/metonym/nouveau)
 [![npm version](https://img.shields.io/npm/v/nouveau.svg)](https://www.npmjs.com/package/nouveau)
