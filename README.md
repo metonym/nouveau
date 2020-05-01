@@ -98,6 +98,8 @@ Customize the `entry` and `outDir` fields in your `package.json`:
 }
 ```
 
+## License
+
 [MIT](LICENSE)
 
 [npm]: https://img.shields.io/npm/v/nouveau.svg?color=blue
