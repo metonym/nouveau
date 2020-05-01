@@ -1,0 +1,10 @@
+/.site
+
+.DS_Store
+/lib
+/node_modules
+yarn-debug.log*
+yarn-error.log*
+
+/src/tests/fixtures/.site
+/src/tests/fixtures/dist
