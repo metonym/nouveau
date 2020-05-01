@@ -5,6 +5,8 @@
 
 > Old school Static Site Generator using Svelte and PostHTML.
 
+`nouveau` enhances your static web pages with JavaScript by using Svelte. No JavaScript is generated if the Svelte markup is purely presentational.
+
 ## Install
 
 ```bash
@@ -42,12 +44,6 @@ Add the following to your `src/index.html`:
   </head>
   <body>
     <svelte>
-      <style>
-        h1 {
-          font-weight: 700;
-        }
-      </style>
-
       <script>
         let count = 0;
       </script>
