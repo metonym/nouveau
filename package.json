@@ -1,6 +1,6 @@
 {
   "name": "nouveau",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Old school Static Site Generator using Svelte and PostHTML",
   "author": "Eric Liu (https://github.com/metonym)",
