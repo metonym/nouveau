@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "nouveau --dev",
+    "build": "nouveau"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "nouveau": "^0.1.0"
+  }
+}

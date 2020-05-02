@@ -5,7 +5,12 @@
 
 > Old school Static Site Generator using Svelte and PostHTML.
 
-`nouveau` enhances your static web pages with JavaScript by using Svelte. No JavaScript is generated if the Svelte markup is purely presentational.
+`nouveau` enhances your static web pages with JavaScript by using Svelte. No JavaScript is generated if the Svelte markup is purely static (i.e. presentational).
+
+See the example project:
+
+- **[example/src](example/src)**: Source files
+- **[example/public](example/public)**: Generated files with compiled Svelte code
 
 ## Install
 

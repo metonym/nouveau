@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <svelte>
+      <style>
+        ul {
+          border: 1px solid blue;
+        }
+
+        li {
+          padding: 1rem;
+        }
+      </style>
+
+      <ul>
+        {#each [0, 1, 2] as item}
+          <li>Item {item}</li>
+        {/each}
+      </ul>
+    </svelte>
+  </body>
+</html>
