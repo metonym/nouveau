@@ -2,9 +2,12 @@ import Nouveau from "../";
 import test from "tape";
 import fs from "fs";
 
-test("Nouveau - dev", async (t) => {
+test.only("Nouveau - dev", async (t) => {
+  t.plan(2);
+
   const nouveau = new Nouveau({
     dev: true,
+    noWatch: true,
     entry: "src/tests/fixtures/src/",
     outDir: "src/tests/fixtures/.site/",
   });
@@ -22,11 +25,11 @@ test("Nouveau - dev", async (t) => {
     .toString();
 
   t.ok(nested);
-
-  t.end();
 });
 
-test.only("Nouveau - prod", async (t) => {
+test("Nouveau - prod", async (t) => {
+  t.plan(2);
+
   const nouveau = new Nouveau({
     dev: false,
     entry: "src/tests/fixtures/src/",
@@ -46,6 +49,4 @@ test.only("Nouveau - prod", async (t) => {
     .toString();
 
   t.ok(nested);
-
-  t.end();
 });

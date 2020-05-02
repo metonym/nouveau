@@ -20,15 +20,25 @@ const writeFile = promisify(fs.writeFile);
 
 class Nouveau {
   watcher!: InstantiatedCheapWatch;
+  noWatch: boolean = false;
   dev: boolean = true;
   entry: string = "src/";
   outDir: string = "public/";
   _entry: string = "src/";
   _outDir: string = "public/";
 
-  constructor(props?: { dev: boolean; entry: string; outDir: string }) {
+  constructor(props?: {
+    dev?: boolean;
+    noWatch?: boolean;
+    entry?: string;
+    outDir?: string;
+  }) {
     if (props && typeof props.dev === "boolean") {
       this.dev = props.dev;
+    }
+
+    if (props && typeof props.noWatch === "boolean") {
+      this.noWatch = props.noWatch;
     }
 
     if (props?.entry) {
@@ -54,7 +64,7 @@ class Nouveau {
       await this.processFile(file);
     }
 
-    if (this.dev) {
+    if (this.dev && !this.noWatch) {
       this.watcher = new CheapWatch({
         dir: this.entry,
       }) as InstantiatedCheapWatch;
@@ -110,7 +120,7 @@ class Nouveau {
       const bench = (performance.now() - start) / 1000;
       const suffix = bench > 1 ? "s" : "ms";
       const styledPath = white(path.split(this._entry).pop());
-      const styledTime = bold(green(`${bench.toFixed(2)}${suffix}`));
+      const styledTime = bold(green(bench.toFixed(2), suffix));
 
       console.log(gray("> Built", styledPath, "in", styledTime));
     } catch (error) {
