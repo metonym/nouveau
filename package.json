@@ -8,8 +8,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "develop": "tsnd --respawn src",
-    "test": "tsnd node_modules/tape/bin/tape src/tests/**.test.ts",
-    "test:tdd": "tsnd --respawn node_modules/tape/bin/tape src/tests/**.test.ts",
+    "test": "tsnd node_modules/tape/bin/tape 'src/tests/**.test.ts'",
     "prepack": "tsc"
   },
   "dependencies": {
@@ -20,7 +19,7 @@
     "htmlnano": "^0.2.5",
     "pkg-config": "^1.1.1",
     "posthtml": "^0.13.0",
-    "posthtml-svelte": "^0.4.5",
+    "posthtml-svelte": "^0.4.6",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
@@ -42,7 +41,9 @@
   "keywords": [
     "static site generator",
     "svelte",
-    "posthtml"
+    "posthtml",
+    "posthtml-svelte",
+    "rollup"
   ],
   "files": [
     "cli.js",
