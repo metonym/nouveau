@@ -5,6 +5,6 @@
   </head>
   <body>
     more content
-    <svelte>Nested2</svelte>
+    <svelte>{#each [0, 1, 2] as item}<li>{item}</li>{/each}</svelte>
   </body>
 </html>

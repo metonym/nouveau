@@ -8,7 +8,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "develop": "tsnd --respawn src",
-    "test": "tsnd src/tests/*.test.ts",
+    "test": "tsnd src/tests",
     "prepack": "tsc"
   },
   "dependencies": {

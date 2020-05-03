@@ -2,7 +2,7 @@ import { strict as test } from "assert";
 import fs from "fs";
 import path from "path";
 import { promisify } from "util";
-import Nouveau from "../";
+import Nouveau from "..";
 
 const read = promisify(fs.readFile);
 
