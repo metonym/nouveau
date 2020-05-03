@@ -1,10 +1,8 @@
-import Nouveau from "../";
-import test from "tape";
+import { strict as test } from "assert";
 import fs from "fs";
+import Nouveau from "../";
 
-test.only("Nouveau - dev", async (t) => {
-  t.plan(2);
-
+async function dev() {
   const nouveau = new Nouveau({
     dev: true,
     noWatch: true,
@@ -14,22 +12,17 @@ test.only("Nouveau - dev", async (t) => {
 
   await nouveau.init();
 
-  const index = fs
-    .readFileSync("src/tests/fixtures/.site/index.html")
-    .toString();
+  const index = fs.readFileSync("src/tests/fixtures/.site/index.html", "utf-8");
+  const nested = fs.readFileSync(
+    "src/tests/fixtures/.site/nested/index.html",
+    "utf-8"
+  );
 
-  t.ok(index);
+  test.ok(index);
+  test.ok(nested);
+}
 
-  const nested = fs
-    .readFileSync("src/tests/fixtures/.site/nested/index.html")
-    .toString();
-
-  t.ok(nested);
-});
-
-test("Nouveau - prod", async (t) => {
-  t.plan(2);
-
+async function prod() {
   const nouveau = new Nouveau({
     dev: false,
     entry: "src/tests/fixtures/src/",
@@ -38,15 +31,20 @@ test("Nouveau - prod", async (t) => {
 
   await nouveau.init();
 
-  const index = fs
-    .readFileSync("src/tests/fixtures/dist/index.html")
-    .toString();
+  const index = fs.readFileSync("src/tests/fixtures/dist/index.html", "utf-8");
+  const nested = fs.readFileSync(
+    "src/tests/fixtures/dist/nested/index.html",
+    "utf-8"
+  );
 
-  t.ok(index);
+  test.ok(index);
+  test.ok(nested);
+}
 
-  const nested = fs
-    .readFileSync("src/tests/fixtures/dist/nested/index.html")
-    .toString();
-
-  t.ok(nested);
-});
+(async () => {
+  if (process.argv.slice(2)[0] === "--dev") {
+    await dev();
+  } else {
+    await prod();
+  }
+})();

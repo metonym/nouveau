@@ -8,7 +8,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "develop": "tsnd --respawn src",
-    "test": "tsnd node_modules/tape/bin/tape 'src/tests/**.test.ts'",
+    "test": "tsnd src/tests/*.test.ts",
     "prepack": "tsc"
   },
   "dependencies": {
@@ -24,8 +24,6 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^8.1.0",
-    "@types/tape": "^4.13.0",
-    "tape": "^5.0.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   },
