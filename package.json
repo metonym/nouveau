@@ -19,7 +19,7 @@
     "htmlnano": "^0.2.5",
     "pkg-config": "^1.1.1",
     "posthtml": "^0.12.x",
-    "posthtml-svelte": "^0.4.6",
+    "posthtml-svelte": "0.4.7",
     "yargs": "^15.3.1"
   },
   "devDependencies": {

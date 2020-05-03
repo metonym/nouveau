@@ -2096,10 +2096,10 @@ posthtml-render@^1.1.5, posthtml-render@^1.2.2, posthtml-render@^1.2.x:
   resolved "https://registry.yarnpkg.com/posthtml-render/-/posthtml-render-1.2.2.tgz#f554a19ed40d40e2bfc160826b0a91d4a23656cd"
   integrity sha512-MbIXTWwAfJ9qET6Zl29UNwJcDJEEz9Zkr5oDhiujitJa7YBJwEpbkX2cmuklCDxubTMoRWpid3q8DrSyGnUUzQ==
 
-posthtml-svelte@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/posthtml-svelte/-/posthtml-svelte-0.4.6.tgz#9092d7446c2786676785a0d791b2299ff816ad08"
-  integrity sha512-XRWzHVPobEJEloQtBx7ci2UuGrpAr4hj3PHleLS5RZel7LWkxeNd3Arsk96g/nY5/5gb7X8hIlm6OTJDBaD7uw==
+posthtml-svelte@0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/posthtml-svelte/-/posthtml-svelte-0.4.7.tgz#e9699c4767d86ad7f83d4f2b5f03f1b0144d16d5"
+  integrity sha512-z8I1TLkef2+3mhf6anF4sgboZfxTtnMcqmthOa1tKcLhqGAZdx/GiIvmAGkSpzPCrG2UJD5/tGFswZ+rATkXuw==
   dependencies:
     "@rollup/plugin-node-resolve" "^7.x"
     "@rollup/plugin-virtual" "^2.x"
