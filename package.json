@@ -1,8 +1,10 @@
 {
   "private": true,
+  "license": "MIT",
   "scripts": {
     "start": "nouveau --dev",
-    "build": "nouveau"
+    "build": "nouveau",
+    "deploy": "node gh-pages"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
