@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
   </head>
-  <body>
+  <body>some content
     <svelte>
       <style>
         ul {
-          border: 1px solid blue;
+          border: 1px solid green;
         }
 
         li {
           padding: 1rem;
         }
       </style>
-
+      Static list
       <ul>
         {#each [0, 1, 2] as item}
           <li>Item {item}</li>

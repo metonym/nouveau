@@ -90,7 +90,9 @@ class Nouveau {
 
     try {
       const start = performance.now();
-      const file = (await readFile(resolve(this.entry, path))) as Buffer;
+      const resolved_path = resolve(this.entry, path);
+      // @ts-ignore
+      const file = await readFile(resolved_path, "utf-8");
       const outputPath = isAbsolute(path)
         ? path.replace(this.entry, this.outDir)
         : resolve(this.outDir, path);
@@ -98,9 +100,9 @@ class Nouveau {
         svelte({
           out: this.dev ? undefined : dirname(outputPath),
           currentDir: join(this.entry),
-          key: createHash("md5").update(path).digest("hex"),
+          key: createHash("md5").update(file).digest("hex"),
         }),
-      ]).process(file.toString(), {
+      ]).process(file, {
         // @ts-ignore
         recognizeSelfClosing: true,
       });
