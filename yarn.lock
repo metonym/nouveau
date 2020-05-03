@@ -40,13 +40,13 @@
   integrity sha512-p1OmbadojpfF1olZ0YS0SQE256+0eiTTJYeBURtsWuahTRcNpjLELvI87cwx1gOe4OwVUom+Mvl9tiUy5T2p2Q==
 
 "@rollup/pluginutils@^3.0.8":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.9.tgz#aa6adca2c45e5a1b950103a999e3cddfe49fd775"
-  integrity sha512-TLZavlfPAZYI7v33wQh4mTP6zojne14yok3DNSLcjoG/Hirxfkonn6icP5rrNWRn8nZsirJBFFpijVOJzkUHDg==
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.10.tgz#a659b9025920378494cd8f8c59fbf9b3a50d5f12"
+  integrity sha512-d44M7t+PjmMrASHbhgpSbVgtL6EFyX7J4mYxwQ/c5eoaE6N2VgCgEcWVzNnwycIloti+/MpwFr8qfw+nRw00sw==
   dependencies:
     "@types/estree" "0.0.39"
     estree-walker "^1.0.1"
-    micromatch "^4.0.2"
+    picomatch "^2.2.2"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -678,9 +678,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.413:
-  version "1.3.426"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.426.tgz#d7301de9e40df83a40fe1f51b4463cfe170d1153"
-  integrity sha512-sdQ7CXQbFflKY5CU63ra+kIYq9F7d1OqI33856qJZxTrwo0sLASdmoRl9lWpGrQDS9Nk/RFliQWd3PPDrZ+Meg==
+  version "1.3.427"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.427.tgz#ea43d02908a8c71f47ebb46e09de5a3cf8236f04"
+  integrity sha512-/rG5G7Opcw68/Yrb4qYkz07h3bESVRJjUl4X/FrKLXzoUJleKm6D7K7rTTz8V5LUWnd+BbTOyxJX2XprRqHD8A==
 
 email-addresses@^3.0.1:
   version "3.1.0"
@@ -1485,10 +1485,10 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
-nouveau@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/nouveau/-/nouveau-0.1.1.tgz#f77ce580a9dfad8c01d4528908a56ef01153206f"
-  integrity sha512-eum+ymptdTS6B3KjpqDJol8ugGT1afA5PXR5xAdrvTAXDykdsdFzjGpbfS2wPdwaGYIoyqsqoi5yc4/x19fEZg==
+nouveau@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/nouveau/-/nouveau-0.1.2.tgz#d74d1bccfb314c1f09d1e77c1e5a19fa0170b236"
+  integrity sha512-1N4z3htbUFaAId6v7f19qnjrUFY/n2PdK6EbFEuLQeRTOe/FcEnIOm7YCt0qEV+VAbsN3oELoslj3vqkewRz7Q==
   dependencies:
     chalk "^4.0.0"
     cheap-watch "^1.0.2"
@@ -1496,7 +1496,7 @@ nouveau@^0.1.1:
     fs-extra "^9.0.0"
     htmlnano "^0.2.5"
     pkg-config "^1.1.1"
-    posthtml "^0.13.0"
+    posthtml "^0.12.x"
     posthtml-svelte "^0.4.6"
     yargs "^15.3.1"
 
@@ -1662,7 +1662,7 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-picomatch@^2.0.5, picomatch@^2.2.1:
+picomatch@^2.0.5, picomatch@^2.2.1, picomatch@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
@@ -1981,9 +1981,9 @@ postcss-value-parser@^4.0.2:
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
 postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.27:
-  version "7.0.27"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.27.tgz#cc67cdc6b0daa375105b7c424a85567345fc54d9"
-  integrity sha512-WuQETPMcW9Uf1/22HWUWP9lgsIC+KEHg2kozMflKjbeUtw9ujvFX6QmIfozaErDkmLWS9WEnEdEe6Uo9/BNTdQ==
+  version "7.0.28"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.28.tgz#d349ced7743475717ba91f6810efb58c51fb5dbb"
+  integrity sha512-YU6nVhyWIsVtlNlnAj1fHTsUKW5qxm3KEgzq2Jj6KTEFOTK8QWR12eIDvrlWhiSTK8WIBFTBhOJV4DY6dUuEbw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -2015,18 +2015,10 @@ posthtml-svelte@^0.4.6:
     svelte "^3.x"
     terser "^4.x"
 
-posthtml@^0.12.0:
+posthtml@^0.12.0, posthtml@^0.12.x:
   version "0.12.3"
   resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.12.3.tgz#8fa5b903907e9c10ba5b883863cc550189a309d5"
   integrity sha512-Fbpi95+JJyR0tqU7pUy1zTSQFjAsluuwB9pJ1h0jtnGk7n/O2TBtP5nDl9rV0JVACjQ1Lm5wSp4ppChr8u3MhA==
-  dependencies:
-    posthtml-parser "^0.4.2"
-    posthtml-render "^1.2.2"
-
-posthtml@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.13.0.tgz#164e9be086d32da795c6ee26e4f8f0a931e2d8d8"
-  integrity sha512-g9KDiHUJZrzeGUfzpSLJ51K/tJrl+QS/zrEEv2MoIyFZyWVGCHDNQva2MVsy4Oqy4jIFRFjNW4oFjMardOqmKQ==
   dependencies:
     posthtml-parser "^0.4.2"
     posthtml-render "^1.2.2"
