@@ -1,41 +1,41 @@
 import { strict as test } from "assert";
 import fs from "fs";
+import path from "path";
+import { promisify } from "util";
 import Nouveau from "../";
 
+const read = promisify(fs.readFile);
+
 async function dev() {
+  const outDir = "src/tests/fixtures/.site/";
   const nouveau = new Nouveau({
     dev: true,
     noWatch: true,
     entry: "src/tests/fixtures/src/",
-    outDir: "src/tests/fixtures/.site/",
+    outDir,
   });
 
   await nouveau.init();
 
-  const index = fs.readFileSync("src/tests/fixtures/.site/index.html", "utf-8");
-  const nested = fs.readFileSync(
-    "src/tests/fixtures/.site/nested/index.html",
-    "utf-8"
-  );
+  const index = await read(path.join(outDir, "index.html"), "utf-8");
+  const nested = await read(path.join(outDir, "nested/index.html"), "utf-8");
 
   test.ok(index);
   test.ok(nested);
 }
 
 async function prod() {
+  const outDir = "src/tests/fixtures/dist/";
   const nouveau = new Nouveau({
     dev: false,
     entry: "src/tests/fixtures/src/",
-    outDir: "src/tests/fixtures/dist/",
+    outDir,
   });
 
   await nouveau.init();
 
-  const index = fs.readFileSync("src/tests/fixtures/dist/index.html", "utf-8");
-  const nested = fs.readFileSync(
-    "src/tests/fixtures/dist/nested/index.html",
-    "utf-8"
-  );
+  const index = await read(path.join(outDir, "index.html"), "utf-8");
+  const nested = await read(path.join(outDir, "nested/index.html"), "utf-8");
 
   test.ok(index);
   test.ok(nested);
