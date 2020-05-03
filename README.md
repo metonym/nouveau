@@ -12,6 +12,16 @@ See the example project:
 - **[example/src](example/src)**: Source files
 - **[example/public](example/public)**: Generated files with compiled Svelte code
 
+## Quick start
+
+Get started with a basic template:
+
+```bash
+npx degit metonym/nouveau#template my-app
+cd my-app
+yarn install
+```
+
 ## Install
 
 ```bash
